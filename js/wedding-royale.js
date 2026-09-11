@@ -180,10 +180,102 @@
     }
   }
 
+  // --------------------------------------------------------------------------
+  // PAGE SUITE NAVIGATION & ACTIVE PILL SYNC
+  // --------------------------------------------------------------------------
+  function initPageSuiteNav() {
+    var pills = document.querySelectorAll('.suite-nav-pill');
+    var pages = document.querySelectorAll('.invitation-page-sheet');
+    if (!pills.length || !pages.length) return;
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function (e) {
+        var targetId = pill.getAttribute('data-target');
+        var targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+        }
+      });
+    });
+
+    // Sync active pill on scroll
+    if ('IntersectionObserver' in window) {
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            pills.forEach(function (p) {
+              if (p.getAttribute('data-target') === id) {
+                p.classList.add('active');
+              } else {
+                p.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.4 });
+
+      pages.forEach(function (page) {
+        navObserver.observe(page);
+      });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // CALENDAR ADD EVENT HELPERS
+  // --------------------------------------------------------------------------
+  function createGoogleCalendarUrl(title, details, location, startISO, endISO) {
+    var s = startISO.replace(/-|:|\.\d\d\d/g, '');
+    var e = endISO.replace(/-|:|\.\d\d\d/g, '');
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+      '&text=' + encodeURIComponent(title) +
+      '&dates=' + encodeURIComponent(s + '/' + e) +
+      '&details=' + encodeURIComponent(details) +
+      '&location=' + encodeURIComponent(location);
+  }
+
+  window.addBaratToCalendar = function () {
+    var url = createGoogleCalendarUrl(
+      'Barat of Aseerul | Aseerul & Aleena Wedding',
+      'Accompany the barat of Aseerul from Our Residence - Syed Shah maroof House to MNK Lawn, Lucknow.',
+      'MNK Lawn, Lucknow',
+      '20261107T083000Z',
+      '20261107T133000Z'
+    );
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  window.addManjhaToCalendar = function () {
+    var url = createGoogleCalendarUrl(
+      'Manjha Ceremony of Aseerul | Aseerul & Aleena Wedding',
+      'We warmly invite you to share in our joy at the manjha ceremony for our dear brother Aseerul. Warm Regards - Zoya, Iqra & Zara.',
+      'Galaxy Banquet & Lawn, behind Honda Dealership, Gulhariya, Gorakhpur',
+      '20261106T133000Z',
+      '20261106T173000Z'
+    );
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  window.addWalimaToCalendar = function () {
+    var url = createGoogleCalendarUrl(
+      'Walima Reception: Aseerul & Aleena',
+      'We are delighted to invite you for the walima of our beloved son Aseerul with Aleena. Venue: Harsh Vatika, Gorakhpur.',
+      'Harsh Vatika, Taramandal Road, Near Zoo, Deoria Bypass Road, Gorakhpur',
+      '20261110T143000Z',
+      '20261110T183000Z'
+    );
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   // Initialize once DOM is ready
   document.addEventListener('DOMContentLoaded', function () {
     initCountdown();
     initScrollReveal();
+    initPageSuiteNav();
   });
 
 })();
+

@@ -881,3 +881,370 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* --------------------------------------------------------------------------
+   ROYAL INVITATION PAGES SUITE (PAGES 1 - 4 FORMAT)
+   -------------------------------------------------------------------------- */
+.invitation-suite-section {
+  margin: 45px 0;
+}
+
+.suite-nav-wrap {
+  position: sticky;
+  top: 48px;
+  z-index: 990;
+  margin: 0 auto 30px auto;
+  max-width: 520px;
+  background: rgba(249, 240, 224, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 8px 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(180, 140, 61, 0.4);
+  box-shadow: 0 8px 24px rgba(90, 15, 27, 0.08);
+}
+
+.suite-nav-pills {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.suite-nav-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.suite-nav-pill {
+  flex: 1;
+  text-align: center;
+  padding: 7px 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  text-decoration: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(180, 140, 61, 0.25);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.suite-nav-pill:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--burgundy);
+  border-color: var(--gold-primary);
+}
+
+.suite-nav-pill.active {
+  background: linear-gradient(135deg, #7D591B 0%, #B48C3D 35%, #E9D29A 70%, #A67D2B 100%);
+  color: #3E0610;
+  font-weight: 700;
+  border-color: #CDA95A;
+  box-shadow: 0 2px 8px rgba(180, 140, 61, 0.4);
+}
+
+/* Individual Stationery Page Sheet */
+.invitation-page-sheet {
+  background: linear-gradient(180deg, #FFFDF9 0%, #FAF4E8 100%);
+  border: 1.5px solid var(--gold-light);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 36px;
+  box-shadow: 0 16px 44px rgba(90, 15, 27, 0.08), 0 2px 10px rgba(180, 140, 61, 0.15);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.invitation-page-sheet:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(90, 15, 27, 0.12), 0 4px 14px rgba(180, 140, 61, 0.22);
+}
+
+.page-sheet-inner {
+  border: 1px solid rgba(180, 140, 61, 0.4);
+  border-radius: 14px;
+  padding: 34px 22px 30px 22px;
+  text-align: center;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(205, 169, 90, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(90, 15, 27, 0.04) 0%, transparent 60%);
+}
+
+/* Corner Flourishes */
+.page-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: var(--gold-light);
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.7;
+}
+.page-corner.tl { top: 8px; left: 8px; }
+.page-corner.tr { top: 8px; right: 8px; }
+.page-corner.bl { bottom: 8px; left: 8px; }
+.page-corner.br { bottom: 8px; right: 8px; }
+
+/* Page Header & Underline */
+.page-sheet-header {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 6vw, 34px);
+  color: var(--burgundy);
+  letter-spacing: 0.14em;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-sheet-rule {
+  width: 140px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  margin: 0 auto 22px auto;
+}
+
+/* Hosts & Invitation Text */
+.page-sheet-hosts {
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 4.2vw, 20px);
+  color: var(--burgundy-dark);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.page-sheet-intro {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 4.5vw, 21px);
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Highlighted Names */
+.page-sheet-name-highlight {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 8vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #7D591B 0%, #B48C3D 30%, #E9D29A 55%, #A67D2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: block;
+  line-height: 1.15;
+}
+
+.page-sheet-connector {
+  font-family: var(--font-script);
+  font-size: clamp(30px, 6.5vw, 38px);
+  color: var(--burgundy);
+  display: block;
+  margin: -2px 0 4px 0;
+  line-height: 1;
+}
+
+.page-sheet-parentage {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 3.8vw, 18px);
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Date & Time Segment */
+.page-sheet-datetime-block {
+  margin: 22px auto;
+  padding: 12px 18px;
+  background: rgba(180, 140, 61, 0.08);
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px dashed rgba(180, 140, 61, 0.35);
+}
+
+.page-sheet-on-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.page-sheet-date {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 4.4vw, 22px);
+  color: var(--burgundy);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.page-sheet-time {
+  font-family: var(--font-sans);
+  font-size: clamp(14px, 3.5vw, 16px);
+  color: var(--gold-deep);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* Route / Venue Details */
+.page-sheet-route-box {
+  margin: 18px 0;
+  line-height: 1.5;
+}
+
+.page-sheet-from {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+.page-sheet-swirl {
+  font-size: 20px;
+  color: var(--gold-primary);
+  margin: 8px 0;
+  display: block;
+}
+
+.page-sheet-to {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 4.2vw, 21px);
+  color: var(--burgundy);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.page-sheet-venue-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.page-sheet-venue-name {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 4.8vw, 24px);
+  color: var(--burgundy);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.page-sheet-venue-address {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Warm Regards Closing */
+.page-sheet-regards {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(180, 140, 61, 0.3);
+  font-family: var(--font-body);
+  font-size: clamp(16px, 3.8vw, 19px);
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Page Stamp Notation Badge (Bottom Right) */
+.page-sheet-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(180, 140, 61, 0.2);
+}
+
+.page-stamp-badge {
+  font-family: var(--font-script);
+  font-size: 24px;
+  color: var(--gold-deep);
+  margin-left: auto;
+  line-height: 1;
+  padding: 2px 10px;
+  background: rgba(180, 140, 61, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 61, 0.25);
+}
+
+/* Action Buttons inside Page Sheet */
+.page-sheet-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.page-sheet-actions .btn-direction {
+  flex: 1;
+}
+
+.btn-calendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--burgundy);
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(180, 140, 61, 0.4);
+  box-shadow: 0 2px 8px rgba(106, 81, 64, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-calendar:hover {
+  background: #FFF;
+  border-color: var(--gold-primary);
+  color: var(--burgundy-light);
+  transform: translateY(-1px);
+}
+
+.btn-calendar svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--gold-deep);
+}
+
+@media (max-width: 480px) {
+  .page-sheet-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .page-sheet-inner {
+    padding: 26px 14px 22px 14px;
+  }
+}
