@@ -261,8 +261,8 @@
 
   window.addWalimaToCalendar = function () {
     var url = createGoogleCalendarUrl(
-      'Walima Reception: Aseerul & Aleena',
-      'We are delighted to invite you for the walima of our beloved son Aseerul with Aleena. Venue: Harsh Vatika, Gorakhpur.',
+      'Walima Dinner Reception: Aseerul & Aleena',
+      'We are delighted to invite you for the walima dinner reception of our beloved son Aseerul with Aleena. Dinner: 8:00 PM Onwards. Venue: Harsh Vatika, Gorakhpur.',
       'Harsh Vatika, Taramandal Road, Near Zoo, Deoria Bypass Road, Gorakhpur',
       '20261110T143000Z',
       '20261110T183000Z'

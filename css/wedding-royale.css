@@ -891,7 +891,7 @@ body::before {
 
 .suite-nav-wrap {
   position: sticky;
-  top: 48px;
+  top: 14px;
   z-index: 990;
   margin: 0 auto 30px auto;
   max-width: 520px;
