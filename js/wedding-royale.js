@@ -252,7 +252,7 @@
     var url = createGoogleCalendarUrl(
       'Manjha Ceremony of Aseerul | Aseerul & Aleena Wedding',
       'We warmly invite you to share in our joy at the manjha ceremony for our dear brother Aseerul. Warm Regards - Zoya, Iqra & Zara.',
-      'Galaxy Banquet & Lawn, behind Honda Dealership, Gulhariya, Gorakhpur',
+      'Galaxy Banquet & Lawn, Behind Honda Dealership, Gulharia, Gorakpur',
       '20261106T133000Z',
       '20261106T173000Z'
     );
@@ -262,8 +262,8 @@
   window.addWalimaToCalendar = function () {
     var url = createGoogleCalendarUrl(
       'Walima Dinner Reception: Aseerul & Aleena',
-      'We are delighted to invite you for the walima dinner reception of our beloved son Aseerul with Aleena. Dinner: 8:00 PM Onwards. Venue: Harsh Vatika, Gorakhpur.',
-      'Harsh Vatika, Taramandal Road, Near Zoo, Deoria Bypass Road, Gorakhpur',
+      'We are delighted to invite you for the walima dinner reception of our beloved son Aseerul with Aleena. Dinner: 8:00 PM Onwards. Venue: Harsh Vatika, Ghorakpur.',
+      'Harsh Vatika, Taramandal Road, Near Zoo, Deoria Bypass Road, Ghorakpur',
       '20261110T143000Z',
       '20261110T183000Z'
     );
