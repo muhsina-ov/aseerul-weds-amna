@@ -1,0 +1,10 @@
+# Ignore git and dev files from Cloudflare Static Assets upload
+.git
+.git/**
+.github
+.gitignore
+.wrangler
+.vscode
+wrangler.jsonc
+wrangler.json
+*.ORIGINAL
